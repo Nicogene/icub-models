@@ -55,4 +55,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: Nicogene/blender-robotics-utils
           event-type: repository_trigger
-          client-payload: '{"type": "repository_trigger", "models_list": "${{ steps.set_model_list.outputs.models}}"}'
+          client-payload: '{"type": "repository_trigger", "models_list": "${{ steps.set_model_list.outputs.models }}"}'
