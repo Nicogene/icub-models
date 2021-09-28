@@ -24,7 +24,7 @@ jobs:
           cat $HOME/files_added.json
           echo '${{ steps.file_changes.outputs.files}}'
           echo '${{ steps.file_changes.outputs.files_modified}}'
-          echo '${{ steps.file_changes.outputs.files_added}}
+          echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Find urdf names
         id: set_model_list
         run: |
