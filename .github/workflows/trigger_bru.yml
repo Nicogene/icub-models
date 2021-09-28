@@ -35,7 +35,6 @@ jobs:
           do
             if [ $(echo $i | awk '/iCubGazeboV/') ]
             then
-              echo $i
               if [ $iter_model_list == 0 ]
               then
                 model_name_list="$i"
@@ -45,10 +44,8 @@ jobs:
               fi
             fi
           done
-          echo ${model_name_list[@]}
-          model_name_list=$(echo "${model_name_list[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' ')
-          model_name_list=$(echo ${model_name_list::-1})
-          echo "::set-output name=models::${models_name_list[@]}"
+
+          echo "::set-output name=models::${model_name_list[@]}"
 
 
 
