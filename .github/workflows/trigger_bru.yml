@@ -53,7 +53,7 @@ jobs:
       - name: Repository dispatch to blender-robotics-utils
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ICUB_MODELS_TOKEN }}
           repository: Nicogene/blender-robotics-utils
           event-type: repository_trigger
           client-payload: '{"type": "repository_trigger", "models_list": "${{ steps.set_model_list.outputs.models }}"}'
